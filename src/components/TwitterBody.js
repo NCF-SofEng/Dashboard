@@ -8,7 +8,7 @@ const TwitterBody = () => {
 
   // This will run once every time this component is loaded
   useEffect(() => {
-    fetch("http://54.146.138.252/api/media/tweets")
+    fetch("https://rvhcdjwc8e.execute-api.us-east-1.amazonaws.com/api/media/tweets")
       .then(res => res.json())
       .then(
         (result) => {

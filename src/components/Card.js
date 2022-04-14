@@ -1,11 +1,17 @@
-import '../styles/Card.css';
+import "../styles/Card.css";
+import TwitterBody from "../components/TwitterBody";
 
-const Card = ({ title, body }) => {
+const Card = ({ title, bodyType }) => {
+
+	const selectBody = (bodyType) => {
+		if (bodyType === "Twitter")
+			return <TwitterBody />
+	}
+
 	return(
 		<div className="Card">
-			<h2>This is a Card Component</h2>
-			<p>Card Title: {title}</p>
-			<p>Card Body: {body}</p>
+			<div className="title">{title}</div>
+			<div className="body">{selectBody(bodyType)}</div>
 		</div>
 	);
 }

@@ -1,0 +1,10 @@
+.Card {
+  box-shadow: 0 0 15px -5px black;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 1em;
+}
+
+.Card .title {
+  font-size: 50px;
+}

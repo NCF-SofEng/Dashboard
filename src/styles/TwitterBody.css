@@ -1,3 +1,11 @@
 .TwitterBody {
   scroll-behavior: auto;
 }
+
+.tweet {
+  margin-bottom: 10px;
+}
+
+.username {
+  font-weight: bold;
+}

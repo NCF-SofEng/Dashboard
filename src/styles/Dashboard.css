@@ -1,8 +1,42 @@
 .Dashboard {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.advisory {
+.DashboardContent {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  background-color: #E4E4E4;
+}
 
+.MediaStack {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 500px;
+}
+
+.CardLayout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.MainContent {
+  width: 70%;
+}
+
+/* If the window size is less than 1200px wide, change .CardLayout flex to column  */
+@media screen and (max-width: 1200px) {
+  .CardLayout {
+    flex-direction: column;
+  }
+
+  .MediaStack, .MainContent {
+    width: 100%;
+  }
 }

@@ -1,0 +1,47 @@
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+.TweetContainer {
+    width: 100%;
+    height: fit-content;
+    min-height: 110px;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    padding-top: 10px;
+    /* border-bottom: #828282 1px solid;
+    border-top: #828282 1px solid; */
+}
+
+.User {
+    padding-left: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.ProfileInfo {
+    margin-top: 6px;
+}
+
+.UserName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ScreenName {
+    font-size: 14px;
+    font-weight: normal;
+    /* Some kinda grey pls */
+    color: #828282;
+}
+
+.ProfilePicture {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.Content {
+    /* icon size + icon margin + user padding */
+    margin-left: calc(48px + 10px + 10px)
+}

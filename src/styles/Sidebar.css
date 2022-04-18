@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+.Sidebar {
+    background-color: #F9F9FA;
+    width: 200px;
+    height: 100%;
+}
+
+.Logo {
+    width: 160px;
+    height: 65px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LogoBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.SidebarDivider {
+    width: 100%;
+    border-bottom: solid 2px grey;
+    margin-bottom: 10px;
+}
+
+.NavElement {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+/* .NavElementIcon {
+} */
+
+.NavElementText {
+    width: fit-content;
+    font-size: 24px;
+    margin-left: 4px;
+    color: rgba(0, 0, 0, 0.61);
+    font-family: 'Roboto', sans-serif;
+    }
+
+.NavElementIcon {
+    height: 32px;
+    width: 32px;
+}

@@ -1,4 +1,7 @@
 import "../styles/TwitterBody.css";
+
+import { Tweet } from "./twitter/Tweet.js";
+
 import {useEffect, useState} from "react";
 
 const TwitterBody = () => {
@@ -30,15 +33,11 @@ const TwitterBody = () => {
   } else {
     return (
       <div className="TwitterBody">
-        {tweets.map((tweet, index) => {
-          return (
-            <div key={index} className="tweet">
-              <span className="username">{tweet.user.name}</span>
-              <br/>
-              <span className="tweettext">{tweet.text}</span>
-            </div>
-          );
-        })}
+        {
+          tweets.map((tweet) => {
+            return Tweet({tweet: tweet})
+          })
+        }
       </div>
     );
   }

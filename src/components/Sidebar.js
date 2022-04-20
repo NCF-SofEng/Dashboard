@@ -18,7 +18,7 @@ export const Sidebar = () => {
                     <div className="NavElementText">Dashboard</div>
                 </div>
             </div>
-            <div class="NavElementContainer">
+            <div className="NavElementContainer">
                 <div className="NavElement">
                     <img className="NavElementIcon" src={chatlogo} alt=""></img>
                     <div className="NavElementText">Chatboard</div>

@@ -59,7 +59,7 @@
 
 }
 
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 2000px) {
   .CardPair {
     flex-direction: column;
   }

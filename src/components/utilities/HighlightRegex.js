@@ -8,8 +8,8 @@ export const HighlightRegex = (content, ...expressions) => {
         });
     }
     return (
-        <post>
+        <div>
             <div dangerouslySetInnerHTML={{ __html: content }} />
-        </post>
+        </div>
     );
 }

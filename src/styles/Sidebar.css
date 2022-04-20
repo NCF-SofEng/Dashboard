@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 .Sidebar {
-    background-color: #F9F9FA;
     width: 200px;
     height: 100%;
 }
@@ -47,4 +46,34 @@
 .NavElementIcon {
     height: 32px;
     width: 32px;
+}
+
+/* If the webpage is a mobile device, change .Sidebar */
+@media screen and (max-width: 800px) {
+    .AppContainer {
+        flex-direction: column;
+    }
+
+    .Sidebar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .SidebarDivider {
+        /* Hidden, not needed when in mobile mode */
+        display: none;
+    }
+
+    /* Make sure it's vertically centered in it's parent */
+    .NavElementContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /* space between them */
+        margin-right: 25px;
+    }
 }

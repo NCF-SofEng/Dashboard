@@ -3,7 +3,7 @@ import { HighlightRegex } from "../utilities/HighlightRegex";
 
 export const Tweet = ({ tweet }) => {
     return (
-        <div className="TweetContainer">
+        <div className="TweetContainer" key={tweet.id}>
             <div className="User">
                 <img 
                     className="ProfilePicture" src={tweet.user.profile_image_url}

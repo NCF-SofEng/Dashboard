@@ -10,7 +10,8 @@ import logo from "./assets/images/redtidedash_logo.png";
 
 const App = () => {
   return (
-    <>
+    <div className="AppContainer">
+     {Sidebar()}
       <Router>
         {/* <nav>
           <Link to="/"><img style={{width: "150px"}} src={logo} alt="Logo"/></Link>
@@ -26,7 +27,7 @@ const App = () => {
           <Route path="/chatboard" element={<Chatboard />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

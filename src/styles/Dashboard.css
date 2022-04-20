@@ -6,6 +6,21 @@
   overflow: hidden;
 }
 
+.CardPair {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Chart {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
 .DashboardContent {
   scroll-behavior: smooth;
   height: 100%;
@@ -24,6 +39,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  overflow: auto;
 }
 
 .MainContent {
@@ -38,5 +54,13 @@
 
   .MediaStack, .MainContent {
     width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 1750px) {
+  .CardPair {
+    flex-direction: column;
   }
 }

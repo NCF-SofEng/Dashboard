@@ -12,13 +12,17 @@ export const Sidebar = () => {
                 <img className="Logo" src={logo} alt="Fish with RedTide on it"></img>
             </div>
             <div className="SidebarDivider" />
-            <div className="NavElement">
-                <img className="NavElementIcon" src={dashboardlogo} alt=""></img>
-                <div className="NavElementText">Dashboard</div>
+            <div className="NavElementContainer">
+                <div className="NavElement">
+                    <img className="NavElementIcon" src={dashboardlogo} alt=""></img>
+                    <div className="NavElementText">Dashboard</div>
+                </div>
             </div>
-            <div className="NavElement">
-                <img className="NavElementIcon" src={chatlogo} alt=""></img>
-                <div className="NavElementText">Chatboard</div>
+            <div class="NavElementContainer">
+                <div className="NavElement">
+                    <img className="NavElementIcon" src={chatlogo} alt=""></img>
+                    <div className="NavElementText">Chatboard</div>
+                </div>
             </div>
         </div>
     );

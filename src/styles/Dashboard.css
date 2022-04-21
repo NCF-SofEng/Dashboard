@@ -46,6 +46,14 @@
   width: 70%;
 }
 
+.YoutubeVideo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
 /* If the window size is less than 1200px wide, change .CardLayout flex to column  */
 @media screen and (max-width: 1200px) {
   .CardLayout {

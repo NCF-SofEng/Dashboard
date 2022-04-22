@@ -42,7 +42,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="YoutubeVideo">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/g-jsayvbpYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/x5h0YiU1cHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
 

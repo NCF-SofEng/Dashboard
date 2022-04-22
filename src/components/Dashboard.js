@@ -28,18 +28,8 @@ const Dashboard = () => {
                             </div>
 
                             <div className="CardPair">
-                                <div className="Chart">
-                                    <HighchartsReact
-                                        highcharts={Highcharts}
-                                        options={options}
-                                    />
-                                </div>
-                                <div className="Chart">
-                                    <HighchartsReact
-                                        highcharts={Highcharts}
-                                        options={options}
-                                    />
-                                </div>
+                                <Card bodyType="chart" extras={[options]}/>
+                                <Card bodyType="chart" extras={[options]}/>
                             </div>
                             <div className="YoutubeVideo">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/x5h0YiU1cHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -4,6 +4,7 @@ import logo from "../assets/images/redtidedash_logo.png";
 
 import dashboardlogo from "../assets/svgs/dashboard.svg";
 import chatlogo from "../assets/svgs/chatboard.svg";
+import {Link} from "react-router-dom";
 
 export const Sidebar = () => {
     return (
@@ -13,16 +14,16 @@ export const Sidebar = () => {
             </div>
             <div className="SidebarDivider" />
             <div className="NavElementContainer">
-                <div className="NavElement">
+                <Link className="NavElement" to="/">
                     <img className="NavElementIcon" src={dashboardlogo} alt=""></img>
                     <div className="NavElementText">Dashboard</div>
-                </div>
+                </Link>
             </div>
             <div className="NavElementContainer">
-                <div className="NavElement">
+                <Link className="NavElement" to="/chatboard">
                     <img className="NavElementIcon" src={chatlogo} alt=""></img>
                     <div className="NavElementText">Chatboard</div>
-                </div>
+                </Link>
             </div>
         </div>
     );

@@ -17,9 +17,9 @@ export const Tweet = ({ tweet }) => {
             <div className="Content">
                 <div className="TweetText">{
                     HighlightRegex(tweet.text, 
-                        /#[a-zA-Z0-9]+/,
+                        /#[a-zA-Z\d]+/,
                         /(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/,
-                        /@[a-zA-Z0-9]+/
+                        /@[a-zA-Z\d]+/
                     )}
                 </div>
             </div>

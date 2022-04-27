@@ -9,3 +9,24 @@
 .username {
   font-weight: bold;
 }
+
+/* For the selection menu */
+.TwitterSelectors {
+  flex-direction: row;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  cursor: pointer;  
+}
+
+.TwitterFilter {
+  margin-right: 25px;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.TwitterFilterActive {
+  text-decoration: underline;
+  color: #00aced;
+}

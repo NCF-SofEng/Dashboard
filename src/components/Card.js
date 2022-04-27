@@ -21,6 +21,12 @@ const Card = ({title, bodyType, extras}) => {
       break;
     case "wrap":
       body = extras[0];
+      break;
+    case "youtube":
+      body = (
+        <iframe className="YoutubeVideoIframe" src={extras[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      );
+      break;
     default:
       body = <div>No body</div>;
   }

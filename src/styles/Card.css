@@ -13,6 +13,11 @@
   font-size: 50px;
 }
 
+.YoutubeVideoIframe {
+  width: 43vw;
+  height: 25vw;
+}
+
 /* If the window size is less than 1200px wide, make all Cards 100% width. */
 /* @media screen and (max-width: 1200px) {
   .Card {

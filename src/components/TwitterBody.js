@@ -2,45 +2,77 @@ import "../styles/TwitterBody.css";
 
 import {Tweet} from "./twitter/Tweet.js";
 
-import {useEffect, useState} from "react";
+import { Component } from "react";
 
-const TwitterBody = () => {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [tweets, setTweets] = useState([]);
+export default class TwitterBody extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tweets: [],
+            loading: true,
+            sortingMode: "recent"
+        };
+    }
 
-    // This will run once every time this component is loaded
-    useEffect(() => {
+    componentDidMount() {
+        this.fetchTweets();
+    }
+
+    fetchTweets() {
         fetch("https://rvhcdjwc8e.execute-api.us-east-1.amazonaws.com/api/media/tweets")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setIsLoaded(true);
-                    setTweets(result.data);
-                },
-                // Handle errors
-                (error) => {
-                    setIsLoaded(true);
-                    setError(error);
-                }
-            )
-    }, [])
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    tweets: response.data,
+                    loading: false
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Tweets are loading...</div>;
-    } else {
+    sortTweets(sortingMode) {
+        this.setState({
+            sortingMode: sortingMode
+        });
+        this.forceUpdate();
+    }
+
+    formatTweets() {
+        let tweets;
+        switch (this.state.sortingMode) {
+            case "recent":
+                tweets = [...this.state.tweets].sort((a, b) => {
+                    return Date.parse(b.created_at) - Date.parse(a.created_at)
+                });
+            break;
+            case "trending":
+                tweets = [...this.state.tweets].sort((a, b) => {
+                    return b.retweet_count - a.retweet_count
+                });
+            break;
+            default:
+                tweets = [...this.state.tweets];
+        }
+
+        return tweets;
+    }
+
+    render() {
+        const { loading, sortingMode } = this.state;
         return (
-            <div className="TwitterBody">
-                {
-                    tweets.map((tweet) => {
-                        return Tweet({tweet: tweet})
-                    })
-                }
-            </div>
+            <>
+                <div className="TwitterSelectors">
+                    <div onClick={() => { this.sortTweets("recent") }} className={`TwitterFilter ${sortingMode === "recent" ? "TwitterFilterActive" : ""}`}>Recent</div>
+                    <div onClick={() => { this.sortTweets("trending") }} className={`TwitterFilter ${sortingMode === "trending" ? "TwitterFilterActive" : ""}`}>Trending</div>
+                    <div onClick={() => { this.sortTweets("soup") }} className={`TwitterFilter ${sortingMode === "soup" ? "TwitterFilterActive" : ""}`}>MM SOUP</div>
+                </div>
+                <div className="TwitterBody">
+                    {loading && <div className="Loading">Loading...</div>}
+                    {this.formatTweets().map(tweet => <Tweet key={tweet.id} tweet={tweet} />)}
+                </div>
+            </>
         );
     }
 }
-
-export default TwitterBody;

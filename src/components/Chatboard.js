@@ -15,13 +15,12 @@ const Chatboard = () => {
 				(result) => {
 					setIsLoaded(true);
 					setPosts(result.data);
-					console.log(result.data)
 				},
 				(error) => {
 					setIsLoaded(true);
 					setError(error);
 				}
-			).finally(() => setUpdated(false))
+			).finally(() => setUpdated(true))
 	}, [updated])
 
 	if (error) {
@@ -31,16 +30,21 @@ const Chatboard = () => {
 	} else {
 		return (
 			<div className="ChatboardBody">
-				<h1>Chatboard Route</h1>
 				{
 					posts.map((post, index) => {
 						return (
 							<div className="ChatboardPost" key={index}>
 								<div className="PostTitle">Title: {post.title}</div>
+								<div className="PostContent">Content: {post.message}</div>
 								{post.location !== null &&
 									<div className="PostLocation">Location: {post.location}</div>
 								}
-								<div className="PostContent">Content: {post.message}</div>
+								<div className="PostDate">Posted: {new Date(post.date).toLocaleString()}</div>
+
+								{post.attachment !== null &&
+									// TODO: figure out why image isn't being saved in backend correctly
+									<div className="PostImage">Image: {}</div>
+								}
 								<br/>
 							</div>
 						);

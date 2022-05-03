@@ -5,10 +5,12 @@ const Form = ({updated}) => {
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
     const [location, setLocation] = useState("choose");
+    const [attachment, setAttachment] = useState(null);
 
     // Handle form submits
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(attachment);
 
         // Send post to backend
         fetch("https://rvhcdjwc8e.execute-api.us-east-1.amazonaws.com/api/messageboard/createMessage", {
@@ -20,10 +22,11 @@ const Form = ({updated}) => {
                 title: title,
                 message: message,
                 location: location,
+                attachment: attachment
             })
         }).then((res) => res.json()).then((_res) => {
             // Reset form
-            updated(true);
+            updated(false);
         });
     }
 
@@ -42,6 +45,7 @@ const Form = ({updated}) => {
                     onChange={(e) => setMessage(e.target.value)}
                 />
                 Post Location:
+
                 <select
                     name="location"
                     value={location}
@@ -53,6 +57,23 @@ const Form = ({updated}) => {
                     <option value="Miami, FL">Miami, FL</option>
                     <option value="">No Location</option>
                 </select>
+                Attach Image:
+                <input
+                    type="file"
+                    accept="image/png,image/jpg,image/jpeg,image/gif"
+                    // value={attachment}
+                    onChange={(e) => {
+                        if (e.target.files && e.target.files[0] && (
+                            e.target.files[0].type === "image/png"  ||
+                            e.target.files[0].type === "image/jpg"  ||
+                            e.target.files[0].type === "image/jpeg" ||
+                            e.target.files[0].type === "image/gif")) {
+                            setAttachment(e.target.files[0]);
+                        } else {
+                            alert("Invalid filetype. Please attach a valid filetype or nothing at all.");
+                        }
+                    }}
+                />
             </label>
             <button
                 disabled={title === "" || message === "" || location === "choose"}

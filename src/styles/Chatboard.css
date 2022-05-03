@@ -1,0 +1,10 @@
+.Chatboard {
+  display: flex;
+  width: 100%;
+}
+
+.ChatboardContent {
+  height: 100%;
+  width: 100%;
+  background-color: #E4E4E4;
+}

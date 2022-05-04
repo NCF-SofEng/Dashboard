@@ -29,29 +29,31 @@ const Chatboard = () => {
 		return <div>Tweets are loading...</div>;
 	} else {
 		return (
-			<div className="ChatboardBody">
-				{
-					posts.map((post, index) => {
-						return (
-							<div className="ChatboardPost" key={index}>
-								<div className="PostTitle">Title: {post.title}</div>
-								<div className="PostContent">Content: {post.message}</div>
-								{post.location !== null &&
-									<div className="PostLocation">Location: {post.location}</div>
-								}
-								<div className="PostDate">Posted: {new Date(post.date).toLocaleString()}</div>
+			<div className="Chatboard">
+				<div className="ChatboardContent">
+					<div className="ChatboardPosts">{
+						posts.map((post, index) => {
+							return (
+								<div className="ChatboardPost" key={index}>
+									<div className="PostTitle">Title: {post.title}</div>
+									<div className="PostContent">Content: {post.message}</div>
+									{post.location !== null &&
+										<div className="PostLocation">Location: {post.location}</div>
+									}
+									<div className="PostDate">Posted: {new Date(post.date).toLocaleString()}</div>
 
-								{post.attachment !== null &&
-									// TODO: figure out why image isn't being saved in backend correctly
-									<div className="PostImage">Image: {}</div>
-								}
-								<br/>
-							</div>
-						);
-					})
-				}
+									{post.attachment !== null &&
+										// TODO: figure out why image isn't being saved in backend correctly
+										<div className="PostImage">Image: <img src={post.attachment} alt="Redtide related"/></div>
+									}
+									<br/>
+								</div>
+							);
+						})
+					}</div>
 
-				<Form updated={setUpdated}/>
+					<div className="ChatboardNewPost"><Form updated={setUpdated}/></div>
+				</div>
 			</div>
 		);
 	}

@@ -1,4 +1,43 @@
 form {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.TitleInput {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.MessageInput {
+  padding: 20px;
+  height: 100%;
+}
+
+.MessageInput textarea {
+  height: 100%;
+  width: 100%;
+}
+
+.LocationInput {
+  padding: 20px;
+}
+
+.AttachmentInput {
+  padding: 20px;
+  height: 100%;
+}
+
+.AttachmentInput #attached_image img {
+  height: 250px;
+  width: auto;
+}
+
+.SubmitInput {
+  align-self: center;
+}
+
+.SubmitInput button {
+  height: 50px;
+  width: 150px;
 }

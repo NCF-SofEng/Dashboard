@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ebb44d-0077-4a29-9be1-c290099f9b16" name="Changes" comment="Added image upload support and basic chatboard formatting">
+    <list default="true" id="52ebb44d-0077-4a29-9be1-c290099f9b16" name="Changes" comment="images saved in database and pulled to chatboard successfully">
+      <change afterPath="$PROJECT_DIR$/src/assets/svgs/location.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Chatboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chatboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.js" afterDir="false" />
@@ -104,7 +105,8 @@
       <workItem from="1651543111774" duration="4265000" />
       <workItem from="1651609303752" duration="2750000" />
       <workItem from="1651630937569" duration="5000" />
-      <workItem from="1651630952319" duration="2182000" />
+      <workItem from="1651630952319" duration="2241000" />
+      <workItem from="1651708828566" duration="10380000" />
     </task>
     <task id="LOCAL-00001" summary="Set up some relatively skeleton components and routing">
       <created>1649658052484</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651547367243</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="images saved in database and pulled to chatboard successfully">
+      <created>1651633185845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651633185845</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +158,7 @@
     <MESSAGE value="Set up some relatively skeleton components and routing" />
     <MESSAGE value="Implemented cards and unique card contents." />
     <MESSAGE value="Added image upload support and basic chatboard formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added image upload support and basic chatboard formatting" />
+    <MESSAGE value="images saved in database and pulled to chatboard successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="images saved in database and pulled to chatboard successfully" />
   </component>
 </project>

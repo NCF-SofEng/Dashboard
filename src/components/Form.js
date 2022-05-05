@@ -1,6 +1,21 @@
 import "../styles/Form.css";
 import {useState} from "react";
 
+const florida_counties = [
+    "Escambia", "Levy", "Miami-Dade",
+    "Santa", "Rosa", "Citrus", "Broward",
+    "Okaloosa", "Hernando", "Palm", "Beach",
+    "Walton", "Pasco", "Martin",
+    "Bay", "Pinellas", "St. Lucie",
+    "Gulf", "Hillsborough", "Indian", "River",
+    "Franklin", "Manatee", "Brevard",
+    "Wakulla", "Sarasota", "Volusia",
+    "Jefferson", "Charlotte", "Flagler",
+    "Taylor", "Lee", "St. Johns",
+    "Dixie", "Collier", "Duval",
+    "Monroe", "Nassau"
+]
+
 const Form = ({updated}) => {
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
@@ -41,60 +56,73 @@ const Form = ({updated}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="title">Post Title: </label>
-            <input
-                type="text"
-                id="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
-            <label htmlFor="message">Post Content: </label>
-            <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-            />
-            <label htmlFor="location">Post Location:</label>
-            <select
-                name="location"
-                id="location"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-            >
-                <option value="choose" disabled>Location</option>
-                <option value="Sarasota, FL">Sarasota, FL</option>
-                <option value="Tampa, FL">Tampa, FL</option>
-                <option value="Miami, FL">Miami, FL</option>
-                <option value="">No Location</option>
-            </select>
-            <label htmlFor="attachment">Attach Image:</label>
-            {attachment !== null &&
-                <img src={attachment} alt="Attached"/>
-            }
-            <input
-                type="file"
-                id="attachment"
-                accept="image/png,image/jpg,image/jpeg,image/gif"
-                // value={attachment}
-                onChange={(e) => {
-                    if (e.target.files && e.target.files[0] && (
-                        e.target.files[0].type === "image/png"  ||
-                        e.target.files[0].type === "image/jpg"  ||
-                        e.target.files[0].type === "image/jpeg" ||
-                        e.target.files[0].type === "image/gif")) {
-                        ToBase64(e.target.files[0]).then((base64) => {setAttachment(base64);});
-                    } else {
-                        alert("Invalid filetype. Please attach a valid filetype or nothing at all.");
+            <div className="TitleInput">
+                <label htmlFor="title">Title:<br/></label>
+                <input
+                    type="text"
+                    id="title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+            </div>
+            <div className="MessageInput">
+                <label htmlFor="message">Message:<br/></label>
+                <textarea
+                    id="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+            </div>
+            <div className="LocationInput">
+                <label htmlFor="location">Location:<br/></label>
+                <select
+                    name="location"
+                    id="location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                >
+                    <option value="choose" disabled>Location</option>
+                    {florida_counties.sort().map((county, index) => {
+                        const full_county = county.concat(" County, FL");
+                        return <option key={index} value={full_county}>{full_county}</option>;
+                    })}
+                    <option value="">No Location</option>
+                </select>
+            </div>
+            <div className="AttachmentInput">
+                <div id="attached_image">
+                    {attachment &&
+                        <img src={attachment} alt="Attached"/>
                     }
-                }}
-            />
-            <button
-                disabled={title === "" || message === "" || location === "choose"}
-                type="submit"
-                onSubmit={handleSubmit}
-            >
-                Submit Post
-            </button>
+                </div>
+                <label htmlFor="attachment">Attach Image:</label>
+                <input
+                    type="file"
+                    id="attachment"
+                    accept="image/png,image/jpg,image/jpeg,image/gif"
+                    // value={attachment}
+                    onChange={(e) => {
+                        if (e.target.files && e.target.files[0] && (
+                            e.target.files[0].type === "image/png"  ||
+                            e.target.files[0].type === "image/jpg"  ||
+                            e.target.files[0].type === "image/jpeg" ||
+                            e.target.files[0].type === "image/gif")) {
+                            ToBase64(e.target.files[0]).then((base64) => {setAttachment(base64);});
+                        } else {
+                            alert("Invalid filetype. Please attach a valid filetype or nothing at all.");
+                        }
+                    }}
+                />
+            </div>
+            <div className="SubmitInput">
+                <button
+                    disabled={title === "" || message === "" || location === "choose"}
+                    type="submit"
+                    onSubmit={handleSubmit}
+                >
+                    Submit Post
+                </button>
+            </div>
         </form>
     );
 }

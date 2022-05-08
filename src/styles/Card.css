@@ -1,7 +1,9 @@
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+
 .Card {
   box-shadow: 0 0 15px -5px black;
   border-radius: 5px;
-  margin: 20px;
+  margin: 15px;
   padding: 1em;
   background-color: #F9F9FA;
   overflow: auto;
@@ -9,7 +11,11 @@
   max-height: 100vh;
 }
 
-.Card .title {
+.CardTitle {
+  font-family: 'Helvetica 65 Medium', sans-serif;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 50px;
 }
 

@@ -1,9 +1,6 @@
 import '../styles/Dashboard.css';
 import Card from "./Card";
-import Sidebar from "../components/Sidebar";
 
-import Highcharts from "highcharts";
-import HighchartsReact from 'highcharts-react-official';
 import { Component } from 'react';
 
 export default class Dashboard extends Component {

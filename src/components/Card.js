@@ -34,7 +34,7 @@ const Card = ({title, bodyType, extras}) => {
   return (
     <div className="Card">
       {/* If title then make a div for the title */}
-      {title && <div className="title">{title}</div>}
+      {title && <div className="CardTitle">{title}</div>}
       <div className="body">{body}</div>
     </div>
   );

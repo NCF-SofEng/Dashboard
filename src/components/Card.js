@@ -4,7 +4,7 @@ import AdvisoryBody from "./AdvisoryBody";
 import SpotifyBody from "./SpotifyBody"
 import ChartBody from "./ChartBody";
 
-const Card = ({title, bodyType, extras}) => {
+const Card = ({title, bodyType, description, extras}) => {
   let body;
   switch (bodyType) {
     case "twitter":
@@ -36,6 +36,8 @@ const Card = ({title, bodyType, extras}) => {
       {/* If title then make a div for the title */}
       {title && <div className="CardTitle">{title}</div>}
       <div className="body">{body}</div>
+      {/* If description then make a div for the description */}
+      {description && <div className="CardDescription"><div class="CardDescriptionContent">{description}</div></div>}
     </div>
   );
 }

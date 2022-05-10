@@ -24,6 +24,20 @@
   height: 25vw;
 }
 
+.CardDescription {
+  height: fit-content;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.CardDescriptionContent {
+  font-family: 'Helvetica 65 Medium', sans-serif;
+  margin-right: auto;
+  width: fit-content;
+  margin-left: auto;
+
+}
+
 /* If the window size is less than 1200px wide, make all Cards 100% width. */
 /* @media screen and (max-width: 1200px) {
   .Card {

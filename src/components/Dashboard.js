@@ -71,8 +71,20 @@ export default class Dashboard extends Component {
                                     {/* when loading isn't false, render the charts */}
                                     {this.state.loading === false &&
                                         <>
-                                        <Card bodyType="chart" extras={[this.state.salinity]}/>
-                                        <Card bodyType="chart" extras={[this.state.temperature]}/>
+                                        <Card 
+                                            bodyType="chart"
+                                            extras={[this.state.salinity]}
+                                            description={`
+                                                Salinity in Parts-Per-Thousand, 35 being the usual average occording to the National Weather Service.
+                                            `}
+                                            />
+                                        <Card 
+                                            bodyType="chart"
+                                            extras={[this.state.temperature]}
+                                            description={`
+                                                Milligrams ofchlorophyll measured per cubic meter of sea water. 
+                                            `}
+                                            />
                                         </>
                                     }
                                 </div>

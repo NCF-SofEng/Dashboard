@@ -82,7 +82,7 @@ export default class Dashboard extends Component {
                                             bodyType="chart"
                                             extras={[this.state.temperature]}
                                             description={`
-                                                Milligrams ofchlorophyll measured per cubic meter of sea water. 
+                                                Milligrams of chlorophyll measured per cubic meter of sea water. 
                                             `}
                                             />
                                         </>
@@ -101,35 +101,3 @@ export default class Dashboard extends Component {
         );
     }
 }
-
-// const Dashboard = () => {
-//     return (
-//         <div className="Dashboard">
-//             <div className="DashboardContent">
-//                 <div className="Dashboard">
-//                     <div className="CardLayout">
-//                         <div className="MainContent">
-//                             <div className="Advisory">
-//                                 <Card title="Advisories" bodyType="advisory" />
-//                             </div>
-//                             <div className="YoutubeVideo">
-//                                 <Card bodyType="youtube" extras={["https://www.youtube.com/embed/x5h0YiU1cHM"]} />
-//                             </div>
-//                             <div className="CardPair">
-//                                 <Card bodyType="chart" extras={[options]}/>
-//                                 <Card bodyType="chart" extras={[options]}/>
-//                             </div>
-//                         </div>
-
-//                         <div className="MediaStack">
-//                             <Card title="Twitter" bodyType="twitter" />
-//                             <Card title="Spotify" bodyType="spotify" />
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Dashboard;

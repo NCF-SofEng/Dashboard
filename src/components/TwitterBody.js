@@ -66,7 +66,6 @@ export default class TwitterBody extends Component {
                 <div className="TwitterSelectors">
                     <div onClick={() => { this.sortTweets("recent") }} className={`TwitterFilter ${sortingMode === "recent" ? "TwitterFilterActive" : ""}`}>Recent</div>
                     <div onClick={() => { this.sortTweets("trending") }} className={`TwitterFilter ${sortingMode === "trending" ? "TwitterFilterActive" : ""}`}>Trending</div>
-                    <div onClick={() => { this.sortTweets("soup") }} className={`TwitterFilter ${sortingMode === "soup" ? "TwitterFilterActive" : ""}`}>MM SOUP</div>
                 </div>
                 <div className="TwitterBody">
                     {loading && <div className="Loading">Loading...</div>}

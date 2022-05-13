@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const YoutubeBody = () => {
+    const [currentVideo, setCurrentVideo] = useState(0); 
     const [videos, setVideos] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError]  = useState(null);
@@ -10,7 +11,6 @@ const YoutubeBody = () => {
                 .then(response => {
                     setIsLoaded(true);
                     setVideos(response.data);
-                    console.log(response.data);
                 })
                 .catch(error => {
                     console.error(error);
@@ -18,9 +18,22 @@ const YoutubeBody = () => {
                 });
         },[]
     );
+    const updateVideo = (integer) => {
+        if (currentVideo + integer >= 0 && currentVideo + integer < videos.length){
+            setCurrentVideo(currentVideo + integer);
+        }
+    }
     return (
-        <iframe className="YoutubeVideoIframe" src={"https://www.youtube.com/embed/riEQ8KpcXRQ"} title="YouTube video player" allowFullScreen></iframe>
-    );
+        <div>
+            <div onClick={() => updateVideo(1)}>
+                Next 
+            </div>
+            {isLoaded ? 
+            <iframe className="YoutubeVideoIframe" src={"https://www.youtube.com/embed/" + videos[currentVideo].id.videoId} title="YouTube video player" allowFullScreen></iframe>
+            :"Loading"}<div onClick={() => updateVideo(-1)}>
+                Prev
+            </div>
+    </div>);
 }
 
 export default YoutubeBody

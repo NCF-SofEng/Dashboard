@@ -1,6 +1,6 @@
 import "../styles/Card.css";
 import TwitterBody from "./TwitterBody";
-import AdvisoryBody from "./AdvisoryBody";
+import HealthBody from "./HealthBody";
 import SpotifyBody from "./SpotifyBody"
 import ChartBody from "./ChartBody";
 
@@ -10,8 +10,8 @@ const Card = ({title, bodyType, description, extras}) => {
     case "twitter":
       body = <TwitterBody />;
       break;
-    case "advisory":
-      body = <AdvisoryBody />;
+    case "health":
+      body = <HealthBody />;
       break;
     case "spotify":
       body = <SpotifyBody />;
@@ -37,7 +37,7 @@ const Card = ({title, bodyType, description, extras}) => {
       {title && <div className="CardTitle">{title}</div>}
       <div className="body">{body}</div>
       {/* If description then make a div for the description */}
-      {description && <div className="CardDescription"><div class="CardDescriptionContent">{description}</div></div>}
+      {description && <div className="CardDescription"><div className="CardDescriptionContent">{description}</div></div>}
     </div>
   );
 }

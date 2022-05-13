@@ -28,7 +28,11 @@ export default class Dashboard extends Component {
             this.setState({
                 salinity: { 
                     title: {
-                        text: s.title
+                        text: s.title,
+                        useHTML: true,
+                        style: {
+                            "fontWeight": "bold",
+                        }
                     },
                     xAxis: {
                         type: "datetime"
@@ -39,7 +43,10 @@ export default class Dashboard extends Component {
                 },
                 temperature: {
                     title: {
-                        text: t.title
+                        text: t.title,
+                        style: {
+                            "fontWeight": "bold",
+                        }
                     },
                     xAxis: {
                         type: "datetime"

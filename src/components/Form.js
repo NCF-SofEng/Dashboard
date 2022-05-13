@@ -56,6 +56,7 @@ const Form = ({updated}) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1 style={{textAlign: "center"}}>What is your redtide experience?</h1>
             <div className="TitleInput">
                 <label htmlFor="title">Title:<br/></label>
                 <input

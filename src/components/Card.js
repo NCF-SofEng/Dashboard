@@ -3,7 +3,7 @@ import TwitterBody from "./TwitterBody";
 import HealthBody from "./HealthBody";
 import SpotifyBody from "./SpotifyBody"
 import ChartBody from "./ChartBody";
-import YoutubeBody from "./youtube/YoutubeBody";
+import YoutubeBody from "./YoutubeBody";
 
 const Card = ({title, bodyType, description, extras}) => {
   let body;

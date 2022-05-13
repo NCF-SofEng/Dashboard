@@ -10,7 +10,7 @@ export const Sidebar = () => {
     return (
         <div className="Sidebar">
             <div className="LogoBox">
-                <img className="Logo" src={logo} alt="Fish with RedTide on it"></img>
+                <Link to="/"><img className="Logo" src={logo} alt="Fish with RedTide on it"></img></Link>
             </div>
             <div className="SidebarDivider" />
             <div className="NavElementContainer">

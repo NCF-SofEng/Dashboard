@@ -32,6 +32,7 @@
     font-weight: normal;
     /* Some kinda grey pls */
     color: #828282;
+    cursor: pointer;
 }
 
 .ProfilePicture {

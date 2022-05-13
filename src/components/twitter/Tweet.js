@@ -26,7 +26,7 @@ export const Tweet = ({ tweet }) => {
                 ></img>
                 <div className="ProfileInfo">
                     <div className="UserName">{tweet.user.name}</div>
-                    <div className="ScreenName">@{tweet.user.screen_name} - {parseDate(tweet.created_at)}</div>
+                    <div className="ScreenName" onClick={() => window.location = `https://twitter.com/${tweet.user.screen_name}`}>@{tweet.user.screen_name} - {parseDate(tweet.created_at)}</div>
                 </div>
             </div>
             <div className="Content">

@@ -62,7 +62,7 @@ export default class Dashboard extends Component {
                         <div className="CardLayout">
                             <div className="MainContent">
                                 <div className="Health">
-                                    <Card title="Health Guidelines" bodyType="health" />
+                                    <Card title="Health Concerns" bodyType="health" />
                                 </div>
                                 <div className="YoutubeVideo">
                                     <Card bodyType="youtube"/>

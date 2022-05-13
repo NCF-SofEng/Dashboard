@@ -10,7 +10,8 @@ export default class TwitterBody extends Component {
         this.state = {
             tweets: [],
             loading: true,
-            sortingMode: "recent"
+            sortingMode: "recent",
+            latestUpdate: null
         };
     }
 
@@ -24,7 +25,8 @@ export default class TwitterBody extends Component {
             .then(response => {
                 this.setState({
                     tweets: response.data,
-                    loading: false
+                    loading: false,
+                    latestUpdate: response.refreshTime
                 });
             })
             .catch(error => {
@@ -63,6 +65,9 @@ export default class TwitterBody extends Component {
         const { loading, sortingMode } = this.state;
         return (
             <>
+                <div className="RefreshTime">
+                    Latest update: {new Date(this.state.latestUpdate).toLocaleString()}
+                </div>
                 <div className="TwitterSelectors">
                     <div onClick={() => { this.sortTweets("recent") }} className={`TwitterFilter ${sortingMode === "recent" ? "TwitterFilterActive" : ""}`}>Recent</div>
                     <div onClick={() => { this.sortTweets("trending") }} className={`TwitterFilter ${sortingMode === "trending" ? "TwitterFilterActive" : ""}`}>Trending</div>

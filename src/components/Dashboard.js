@@ -69,7 +69,7 @@ export default class Dashboard extends Component {
                                 </div>
                                 <div className="CardPair">
                                     {/* when loading isn't false, render the charts */}
-                                    {this.state.loading === false &&
+                                    {!this.state.loading ?
                                         <>
                                         <Card 
                                             bodyType="chart"
@@ -86,10 +86,15 @@ export default class Dashboard extends Component {
                                             `}
                                             />
                                         </>
+                                        :
+                                        <>
+                                            <Card bodyType="wrap" extras={["Salinity Graph Loading..."]}/>
+                                            <Card bodyType="wrap" extras={["Chlorophyll Graph Loading..."]}/>
+                                        </>
                                     }
                                 </div>
                             </div>
-    
+
                             <div className="MediaStack">
                                 <Card title="Twitter" bodyType="twitter" />
                                 <Card title="Spotify" bodyType="spotify" />

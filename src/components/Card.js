@@ -3,6 +3,7 @@ import TwitterBody from "./TwitterBody";
 import HealthBody from "./HealthBody";
 import SpotifyBody from "./SpotifyBody"
 import ChartBody from "./ChartBody";
+import YoutubeBody from "./youtube/YoutubeBody";
 
 const Card = ({title, bodyType, description, extras}) => {
   let body;
@@ -23,9 +24,7 @@ const Card = ({title, bodyType, description, extras}) => {
       body = extras[0];
       break;
     case "youtube":
-      body = (
-        <iframe className="YoutubeVideoIframe" src={extras[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      );
+      body = <YoutubeBody/>
       break;
     default:
       body = <div>No body</div>;

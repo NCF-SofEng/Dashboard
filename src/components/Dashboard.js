@@ -65,7 +65,7 @@ export default class Dashboard extends Component {
                                     <Card title="Health Guidelines" bodyType="health" />
                                 </div>
                                 <div className="YoutubeVideo">
-                                    <Card bodyType="youtube" extras={["https://www.youtube.com/embed/x5h0YiU1cHM"]} />
+                                    <Card bodyType="youtube"/>
                                 </div>
                                 <div className="CardPair">
                                     {/* when loading isn't false, render the charts */}

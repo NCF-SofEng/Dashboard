@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ebb44d-0077-4a29-9be1-c290099f9b16" name="Changes" comment="images saved in database and pulled to chatboard successfully">
+    <list default="true" id="52ebb44d-0077-4a29-9be1-c290099f9b16" name="Changes" comment="made sidebar sticky">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/confusion_matrix.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/negative_wordcloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/positive_wordcloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/roc_curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/sentiment_by_month.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgs/analysis.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Analysis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Analysis.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AdvisoryBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HealthBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AdvisoryBody.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/HealthBody.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HealthBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HealthBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/devon/repos/dashboard",
+    "last_opened_file_path": "/home/devon/repos/dashboard/src/styles",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,10 +76,13 @@
     <option name="showLigatures" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,6 +120,12 @@
       <workItem from="1651708828566" duration="10380000" />
       <workItem from="1652378555723" duration="690000" />
       <workItem from="1652405965867" duration="2224000" />
+      <workItem from="1652411652430" duration="7892000" />
+      <workItem from="1652459008077" duration="239000" />
+      <workItem from="1652459548263" duration="1084000" />
+      <workItem from="1652460957364" duration="1123000" />
+      <workItem from="1652827028596" duration="15000" />
+      <workItem from="1653081140856" duration="4996000" />
     </task>
     <task id="LOCAL-00001" summary="Set up some relatively skeleton components and routing">
       <created>1649658052484</created>
@@ -138,7 +155,84 @@
       <option name="project" value="LOCAL" />
       <updated>1651633185845</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated YouTube fetch url">
+      <created>1652412557018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652412557018</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added display for latest twitter api call">
+      <created>1652416636304</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652416636304</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added loading placeholder for charts">
+      <created>1652416656271</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652416656271</updated>
+    </task>
+    <task id="LOCAL-00008" summary="made some slight styling changes to youtube">
+      <created>1652422647170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652422647170</updated>
+    </task>
+    <task id="LOCAL-00009" summary="made card titles sticky for context while scrolling">
+      <created>1652422672409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652422672409</updated>
+    </task>
+    <task id="LOCAL-00010" summary="small health card update">
+      <created>1652422703906</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652422703906</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added context to post form">
+      <created>1652422751610</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652422751610</updated>
+    </task>
+    <task id="LOCAL-00012" summary="enabled dynamic iframe generation from spotify database collection">
+      <created>1652422796052</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652422796052</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated chatboard placeholder">
+      <created>1652460625477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652460625477</updated>
+    </task>
+    <task id="LOCAL-00014" summary="made logo clickable to return to dashboard">
+      <created>1652461019956</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652461019957</updated>
+    </task>
+    <task id="LOCAL-00015" summary="made sidebar sticky">
+      <created>1652461384656</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652461384656</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +255,17 @@
     <MESSAGE value="Implemented cards and unique card contents." />
     <MESSAGE value="Added image upload support and basic chatboard formatting" />
     <MESSAGE value="images saved in database and pulled to chatboard successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="images saved in database and pulled to chatboard successfully" />
+    <MESSAGE value="updated YouTube fetch url" />
+    <MESSAGE value="added display for latest twitter api call" />
+    <MESSAGE value="added loading placeholder for charts" />
+    <MESSAGE value="made some slight styling changes to youtube" />
+    <MESSAGE value="made card titles sticky for context while scrolling" />
+    <MESSAGE value="small health card update" />
+    <MESSAGE value="added context to post form" />
+    <MESSAGE value="enabled dynamic iframe generation from spotify database collection" />
+    <MESSAGE value="updated chatboard placeholder" />
+    <MESSAGE value="made logo clickable to return to dashboard" />
+    <MESSAGE value="made sidebar sticky" />
+    <option name="LAST_COMMIT_MESSAGE" value="made sidebar sticky" />
   </component>
 </project>

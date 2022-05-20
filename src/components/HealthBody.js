@@ -3,6 +3,7 @@ import "../styles/HealthBody.css";
 const HealthBody = () => {
     return (
         <div className="ScrapedBody">
+            <p>Information privided by the <a href="https://myfwc.com/research/redtide/statewide/">Florida Fish and Wildlife Conservation Commission</a>.</p>
             <table>
                 <thead>
                 <tr>

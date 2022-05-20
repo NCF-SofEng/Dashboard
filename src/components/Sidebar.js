@@ -1,7 +1,7 @@
 import '../styles/Sidebar.css';
 
 import logo from "../assets/images/redtidedash_logo.png";
-
+import analysislogo from "../assets/svgs/analysis.svg"
 import dashboardlogo from "../assets/svgs/dashboard.svg";
 import chatlogo from "../assets/svgs/chatboard.svg";
 import {Link} from "react-router-dom";
@@ -17,6 +17,12 @@ export const Sidebar = () => {
                 <Link className="NavElement" to="/">
                     <img className="NavElementIcon" src={dashboardlogo} alt=""></img>
                     <div className="NavElementText">Dashboard</div>
+                </Link>
+            </div>
+            <div className="NavElementContainer">
+                <Link className="NavElement" to="/analysis">
+                    <img className="NavElementIcon" src={analysislogo} alt=""></img>
+                    <div className="NavElementText">Analysis</div>
                 </Link>
             </div>
             <div className="NavElementContainer">

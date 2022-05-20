@@ -5,6 +5,7 @@ import "./App.css";
 import Chatboard from "./components/Chatboard";
 import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar";
+import Analysis from "./components/Analysis";
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 {Sidebar()}
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
+                    <Route path="/analysis" element={<Analysis/>}/>
                     <Route path="/chatboard" element={<Chatboard/>}/>
                 </Routes>
             </Router>

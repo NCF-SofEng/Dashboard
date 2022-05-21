@@ -1,8 +1,12 @@
 import "../styles/YoutubeBody.css";
 import { useEffect, useState } from "react";
-// D.R. and D.G. 
+/*
+* @author DR
+* @author DG
+*/
 //this class represents the body of the youtube card, and everything that goes into how it works. It uses react states to 
 // change the youtube video without reloading the entire page.
+/* @returns {jsx.element}*/
 const YoutubeBody = () => {
     //this react state represents the current video being displayed within the iframe.
     const [currentVideo, setCurrentVideo] = useState(0); 
@@ -26,7 +30,8 @@ const YoutubeBody = () => {
                 });
         },[]);
     // this function intakes an integer as a parameter and updates the video depending on whether the user wants to go to the next video or a previous video.
-    // which returns a 1 or a -1.
+    // @ param integer called integer
+    // @return an integer: will be either 1 or -1
     const updateVideo = (integer) => {
         //this if statement prevents an out of bounds error from occuring in case a user wants to go to a previous video or a next video
         //when there is no next or previous video available.

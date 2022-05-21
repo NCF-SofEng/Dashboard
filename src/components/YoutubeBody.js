@@ -34,10 +34,10 @@ const YoutubeBody = () => {
                     <div className="YoutubeButton" onClick={() => updateVideo(1)}>
                         Next
                     </div>
-                    <iframe className="YoutubeVideoIframe" src={"https://www.youtube.com/embed/" + videos[currentVideo].id.videoId} title="YouTube video player" allowFullScreen></iframe>
                     <div className="YoutubeButton" onClick={() => updateVideo(-1)}>
                         Prev
                     </div>
+                    <iframe className="YoutubeVideoIframe" src={"https://www.youtube.com/embed/" + videos[currentVideo].id.videoId} title="YouTube video player" allowFullScreen></iframe>
                 </div>);
         } else {
             return <div className="Error">{error}</div>;

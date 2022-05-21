@@ -5,6 +5,15 @@ import SpotifyBody from "./SpotifyBody"
 import ChartBody from "./ChartBody";
 import YoutubeBody from "./YoutubeBody";
 
+/**
+ * Represents a card within the dashboard
+ * @param {string} title - The title of the card
+ * @param {string} bodyType - The body type of the card
+ * @param {string} description - The card description
+ * @param extras
+ * @return {JSX.Element}
+ * @author DG
+ */
 const Card = ({title, bodyType, description, extras}) => {
     let body;
     switch (bodyType) {

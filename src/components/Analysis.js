@@ -4,6 +4,11 @@ import sentiment_by_month from '../assets/images/sentiment_by_month.png';
 import negative_wordcloud from '../assets/images/negative_wordcloud.png';
 import positive_wordcloud from '../assets/images/positive_wordcloud.png';
 
+/**
+ * The historical redtide tweet sentiment analysis component
+ * @return {JSX.Element}
+ * @author DG
+ */
 const Analysis = () => {
     return(
         <div className="Analysis">

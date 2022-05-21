@@ -7,11 +7,16 @@ import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar";
 import Analysis from "./components/Analysis";
 
+/**
+ * The main application component which contains all the navigation routes
+ * @return {JSX.Element}
+ * @author DG
+ */
 const App = () => {
     return (
         <div className="AppContainer">
             <Router>
-                {Sidebar()}
+                <Sidebar/>
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path="/analysis" element={<Analysis/>}/>

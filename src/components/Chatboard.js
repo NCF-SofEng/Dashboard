@@ -4,12 +4,19 @@ import locationlogo from "../assets/svgs/location.svg";
 import placeholderAttachment from "../assets/images/chatboard_placeholder_image.png";
 import Form from "./Form";
 
+/**
+ * The chatboard component. Allows users to view and create forum posts.
+ * @return {JSX.Element}
+ * @author DG
+ */
 const Chatboard = () => {
+    // States to hold dynamic content
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [posts, setPosts] = useState([]);
     const [updated, setUpdated] = useState(false);
 
+    // Call our express api and store results in react states.
     useEffect(() => {
         fetch("https://rvhcdjwc8e.execute-api.us-east-1.amazonaws.com/api/messageboard/getMessages")
             .then((res) => res.json())
@@ -25,9 +32,9 @@ const Chatboard = () => {
             ).finally(() => setUpdated(true))
     }, [updated])
 
-    if (error) {
+    if (error) { // If the fetch fails we display the error
         return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
+    } else if (!isLoaded) { // If the fetch hasn't completed yet we notify that things are still loading
         return <div>Posts are loading...</div>;
     } else {
         return (
@@ -40,6 +47,8 @@ const Chatboard = () => {
                                     <div className="ChatboardPost" key={index}>
                                         <div className="PostImage">
                                         {
+                                            // Because attachments are optional we determine whether one is present
+                                            // and if it is we display it and if not we display a placeholder
                                             post.attachment ?
                                                 <img src={post.attachment} alt="Redtide related"/>
                                                 :
@@ -52,6 +61,9 @@ const Chatboard = () => {
                                             <div className="PostLocation">
                                                 <img src={locationlogo} alt="location icon"/>
                                                 {
+                                                    // Because locations are optional we determine whether one is
+                                                    // present and if it is we display it and if not we display that it
+                                                    // was not specified upon post creation
                                                     post.location ?
                                                         post.location
                                                         :

@@ -6,6 +6,12 @@ import dashboardlogo from "../assets/svgs/dashboard.svg";
 import chatlogo from "../assets/svgs/chatboard.svg";
 import {Link} from "react-router-dom";
 
+/**
+ * Main navigation bar to move between dashboard/analysis/chatboard routes.
+ * @return {JSX.Element}
+ * @author DG
+ * @author EF
+ */
 export const Sidebar = () => {
     return (
         <div className="Sidebar">

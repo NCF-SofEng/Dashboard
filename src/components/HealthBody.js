@@ -1,5 +1,10 @@
 import "../styles/HealthBody.css";
 
+/**
+ * Card body that consists of health information from the Florida Fish and Wildlife Conservation Comission
+ * @return {JSX.Element}
+ * @author DG
+ */
 const HealthBody = () => {
     return (
         <div className="ScrapedBody">

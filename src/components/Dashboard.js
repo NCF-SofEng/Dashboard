@@ -3,6 +3,12 @@ import Card from "./Card";
 
 import { Component } from 'react';
 
+/**
+ * The main dashboard component. Contains twitter/spotify/youtube/sensor content.
+ * @author DG
+ * @author EF - Refactored from functional component to class component and added sensor graphs
+ * @author DR - Added youtube card
+ */
 export default class Dashboard extends Component {
     constructor(props) {
         super(props);

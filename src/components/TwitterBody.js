@@ -4,6 +4,11 @@ import {Tweet} from "./twitter/Tweet.js";
 
 import { Component } from "react";
 
+/**
+ * Card body that specializes in displaying tweets.
+ * @author DG
+ * @author EF - Refactored from functional component to class component and added tweet sorting and formatting
+ */
 export default class TwitterBody extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +24,7 @@ export default class TwitterBody extends Component {
         this.fetchTweets();
     }
 
+    // Use our express api to fetch tweets from the database and store them in a react state
     fetchTweets() {
         fetch("https://rvhcdjwc8e.execute-api.us-east-1.amazonaws.com/api/media/tweets")
             .then(response => response.json())
